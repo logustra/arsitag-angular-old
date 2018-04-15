@@ -4,10 +4,10 @@
 
     angular
         .module('angular.old')
-        .directive('user', function () {
+        .directive('profile', () => {
             return {
                 restrict: 'E',
-                templateUrl: 'directive/scenes/home/user.tpl.html',
+                templateUrl: 'directive/scenes/profile/profile.tpl.html',
                 controller: userCtrl,
                 controllerAs: 'vm',
             }

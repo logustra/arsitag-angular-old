@@ -59,6 +59,7 @@ const watchPath = {
     html: 'src/views/*.html',
     directive: 'src/app/**/**/**/**/*.html',
 	sass: 'src/assets/sass/**/*.scss',
+    sass2: 'src/app/**/**/**/**/*.scss',
 	javascript: 'src/app/**/**/**/**/*.js',
 	eslint: 'src/app/**/**/**/**/*.js'
 }
@@ -186,7 +187,7 @@ gulp.task(tasks.watch, () => {
 	});
 	gulp.watch(watchPath.html, [tasks.html]).on('change', browserSync.reload);
 	gulp.watch(watchPath.directive, [tasks.directive]).on('change', browserSync.reload);
-	gulp.watch(watchPath.sass, [tasks.sass]).on('change', browserSync.reload);
+	gulp.watch([watchPath.sass, watchPath.sass2], [tasks.sass]).on('change', browserSync.reload);
 	gulp.watch(watchPath.javascript, [tasks.javascript, tasks.eslint]).on('change', browserSync.reload);
 });
 

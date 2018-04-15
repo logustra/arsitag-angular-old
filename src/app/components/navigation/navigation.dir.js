@@ -1,16 +1,16 @@
 (() => {
     angular
         .module('angular.old')
-        .directive('testB', function() {
+        .directive('navigation', function() {
             return {
                 restrict: 'E',
                 scope: {},
                 templateUrl: 'directive/components/navigation/navigation.tpl.html',
-                controller: testBCtr,
+                controller: navigationCtr,
                 controllerAs: 'vm',
             }
 
-            function testBCtr() {
+            function navigationCtr() {
                 const vm = this;
 
                 const user2 = {

@@ -5,9 +5,9 @@ import './app.routes';
 import './app.services';
 
 // controllers
-import './scenes/home/test.app.ctr';
+import './scenes/profile/profile.ctr';
 import './components/navigation/navigation.ctr'
 
 // directives
-import './scenes/home/test.app.dir';
+import './scenes/profile/profile.dir';
 import './components/navigation/navigation.dir';

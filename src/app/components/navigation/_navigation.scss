@@ -1,0 +1,60 @@
+.navbar {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    background: $white;
+
+    .navbar-wrapper-item {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        .navbar-nav {
+            .nav-item {
+                &:hover {
+                    .nav-link {
+                        color: $red;
+                    }
+                }
+                .nav-link {
+                    font-size: 15px;
+                    cursor: pointer;
+                }
+                .input-group-text {
+                    background: $white;
+                }
+
+            }
+            &:first-of-type {
+                .nav-item {
+                    padding: 0 10px;
+                }
+            }
+            &:last-of-type {
+                .nav-item {
+                    position: relative;
+                    &:nth-of-type(2):before {
+                        background: $darksmoke;
+                        display: block;
+                        content: '';
+                        width: 1px;
+                        height: 25px;
+                        margin: 7px 0;
+                        position: absolute;
+                        right: 0;
+                    }
+                    .btn,
+                    input {
+                        font-size: 15px;
+                    }
+                    .btn-link {
+                        color: var(--secondary);
+                        &:hover {
+                            color: $red;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
