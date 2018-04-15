@@ -1,0 +1,32 @@
+// breakpoints
+$xsmall   :480px;
+$small    :768px;
+$medium   :992px;
+$large    :1200px;
+$xlarge   :1366px;
+$huge     :1400px;
+
+// media queries
+@mixin mq($screenSize) {
+  @if $screenSize == xxsmall {
+   @media only screen and (max-width: $xsmall) { @content; }
+  }
+  @else if $screenSize == xsmall {
+   @media only screen and (min-width: $xsmall) and (max-width: $small - 1) { @content; }
+  }
+  @else if $screenSize == small {
+   @media only screen and (min-width: $small) and (max-width: $medium - 1) { @content; }
+  }
+  @else if $screenSize == medium {
+   @media only screen and (min-width: $medium) and (max-width: $large - 1) { @content; }
+  }
+  @else if $screenSize == large {
+   @media only screen and (min-width: $large) and (max-width: $xlarge - 1) { @content; }
+  }
+  @else if $screenSize == xlarge {
+   @media only screen and (min-width: $xlarge) and (max-width: $huge - 1) { @content; }
+  }
+  @else if $screenSize == huge {
+   @media only screen and (min-width: $huge) { @content; }
+  }
+}

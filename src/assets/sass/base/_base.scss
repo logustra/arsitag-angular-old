@@ -1,0 +1,4 @@
+body {
+    @include bgImgColored ('../images/image.jpg', center center, no-repeat, cover, rgba(255, 0, 0, 0.45));
+    color: $white;
+}

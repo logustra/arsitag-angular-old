@@ -1,0 +1,281 @@
+
+// Clearfix
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Rem Units
+
+@function calculateRem ($size) {
+  $remSize: $size / 10px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size ($size) {
+  font-size: calculateRem($size);
+}
+
+// Background Image
+
+@mixin bgImg ($image, $position, $repeat, $size) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+}
+
+// Background Image Using Parallax Effect
+
+@mixin bgImgParallax ($image, $position, $repeat, $size, $attachment) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+}
+
+// Background Image Colored
+
+@mixin bgImgColored ($image, $position, $repeat, $size, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+}
+
+// Background Image Colored and Using Parallax Effect
+
+@mixin bgImgColoredParallax ($image, $position, $repeat, $size, $attachment, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+}
+
+// Background Image Sliced
+
+@mixin bgImgSlicedTopLeft ($image, $position, $repeat, $size, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 $clipPath, 100% 0, 100% 100%, 0 100%);
+}
+
+@mixin bgImgSlicedTopRight ($image, $position, $repeat, $size, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% $clipPath, 100% 100%, 0 100%);
+}
+
+@mixin bgImgSlicedBottomLeft ($image, $position, $repeat, $size, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 $clipPath);
+}
+
+@mixin bgImgSlicedBottomRight ($image, $position, $repeat, $size, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% 0, 100% $clipPath, 0 100%);
+}
+
+@mixin bgImgSlicedTopBottomLeftRight ($image, $position, $repeat, $size, $clipPathTop, $clipPathBottom) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 $clipPathTop, 100% 0, 100% $clipPathBottom, 0 100%);
+}
+
+@mixin bgImgSlicedTopBottomRightLeft ($image, $position, $repeat, $size, $clipPathTop, $clipPathBottom) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% $clipPathTop, 100% 100%, 0 $clipPathBottom);
+}
+
+// Background Image Sliced and Using Parallac Effect
+
+@mixin bgImgSlicedParallaxTopLeft ($image, $position, $repeat, $size, $attachment, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 $clipPath, 100% 0, 100% 100%, 0 100%);
+}
+
+@mixin bgImgSlicedParallaxTopRight ($image, $position, $repeat, $size, $attachment, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% $clipPath, 100% 100%, 0 100%);
+}
+
+@mixin bgImgSlicedParallaxBottomLeft ($image, $position, $repeat, $size, $attachment, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 $clipPath);
+}
+
+@mixin bgImgSlicedParallaxBottomRight ($image, $position, $repeat, $size, $attachment, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% 0, 100% $clipPath, 0 100%);
+}
+
+@mixin bgImgSlicedParallaxTopBottomLeftRight ($image, $position, $repeat, $size, $attachment, $clipPathTop, $clipPathBottom) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 $clipPathTop, 100% 0, 100% $clipPathBottom, 0 100%);
+}
+
+@mixin bgImgSlicedParallaxTopBottomRightLeft ($image, $position, $repeat, $size, $attachment, $clipPathTop, $clipPathBottom) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% $clipPathTop, 100% 100%, 0 $clipPathBottom);
+}
+
+// Background Image Colored and Sliced
+
+@mixin bgImgColoredSlicedTopLeft ($image, $position, $repeat, $size, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 $clipPath, 100% 0, 100% 100%, 0 100%);
+}
+
+@mixin bgImgColoredSlicedTopRight ($image, $position, $repeat, $size, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% $clipPath, 100% 100%, 0 100%);
+}
+
+@mixin bgImgColoredSlicedBottomLeft ($image, $position, $repeat, $size, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 $clipPath);
+}
+
+@mixin bgImgColoredSlicedBottomRight ($image, $position, $repeat, $size, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% 0, 100% $clipPath, 0 100%);
+}
+
+@mixin bgImgColoredSlicedTopBottomLeftRight ($image, $position, $repeat, $size, $clipPathTop, $clipPathBottom, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 $clipPathTop, 100% 0, 100% $clipPathBottom, 0 100%);
+}
+
+@mixin bgImgColoredSlicedTopBottomRightLeft ($image, $position, $repeat, $size, $clipPathTop, $clipPathBottom, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% $clipPathTop, 100% 100%, 0 $clipPathBottom);
+}
+
+// Background Image Colored, Sliced and Using Parallax Effect
+
+@mixin bgImgColoredSlicedParallaxTopLeft ($image, $position, $repeat, $size, $attachment, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 $clipPath, 100% 0, 100% 100%, 0 100%);
+}
+
+@mixin bgImgColoredSlicedParallaxTopRight ($image, $position, $repeat, $size, $attachment, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% $clipPath, 100% 100%, 0 100%);
+}
+
+@mixin bgImgColoredSlicedParallaxBottomLeft ($image, $position, $repeat, $size, $attachment, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 $clipPath);
+}
+
+@mixin bgImgColoredSlicedParallaxBottomRight ($image, $position, $repeat, $size, $attachment, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% 0, 100% $clipPath, 0 100%);
+}
+
+@mixin bgImgColoredSlicedParallaxTopBottomLeftRight ($image, $position, $repeat, $size, $attachment, $clipPathTop, $clipPathBottom, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 $clipPathTop, 100% 0, 100% $clipPathBottom, 0 100%);
+}
+
+@mixin bgImgColoredSlicedParallaxTopBottomRightLeft ($image, $position, $repeat, $size, $attachment, $clipPathTop, $clipPathBottom, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% $clipPathTop, 100% 100%, 0 $clipPathBottom);
+}
+
+// Background Image Triagle
+
+@mixin bgImgTriangleTop ($image, $position, $repeat, $size, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(50% 0, 100% $clipPath, 100% 100%, 0 100%, 0 $clipPath);
+}
+
+@mixin bgImgTriangleBottom ($image, $position, $repeat, $size, $clipPath) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% 0, 100% $clipPath, 50% 100%, 0 $clipPath);
+}
+
+@mixin bgImgTriangleTopBottom ($image, $position, $repeat, $size, $clipPathTop, $clipPathBottom) {
+  background: url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(50% 0%, 100% $clipPathTop, 100% $clipPathBottom, 50% 100%, 0% $clipPathBottom, 0% $clipPathTop);
+}
+
+// Background Image Colored and Triangle
+
+@mixin bgImgColoredTriangleTop ($image, $position, $repeat, $size, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(50% 0, 100% $clipPath, 100% 100%, 0 100%, 0 $clipPath);
+}
+
+@mixin bgImgColoredTriangleBottom ($image, $position, $repeat, $size, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(0 0, 100% 0, 100% $clipPath, 50% 100%, 0 $clipPath);
+}
+
+@mixin bgImgColoredTriangleTopBottom ($image, $position, $repeat, $size, $clipPathTop, $clipPathBottom, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  clip-path: polygon(50% 0%, 100% $clipPathTop, 100% $clipPathBottom, 50% 100%, 0% $clipPathBottom, 0% $clipPathTop);
+}
+
+// Background Image Colored, Triangle and Using Parallax Effect
+
+@mixin bgImgColoredTriangleParallaxTop ($image, $position, $repeat, $size, $attachment, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(50% 0, 100% $clipPath, 100% 100%, 0 100%, 0 $clipPath);
+}
+
+@mixin bgImgColoredTriangleParallaxBottom ($image, $position, $repeat, $size, $attachment, $clipPath, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(0 0, 100% 0, 100% $clipPath, 50% 100%, 0 $clipPath);
+}
+
+@mixin bgImgColoredTriangleParallaxTopBottom ($image, $position, $repeat, $size, $attachment, $clipPathTop, $clipPathBottom, $rgba) {
+  background: linear-gradient( $rgba, $rgba), url($image) $position $repeat;
+  background-size: $size;
+  background-attachment: $attachment;
+  clip-path: polygon(50% 0%, 100% $clipPathTop, 100% $clipPathBottom, 50% 100%, 0% $clipPathBottom, 0% $clipPathTop);
+}

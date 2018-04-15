@@ -1,0 +1,85 @@
+// breakpoint
+$xsmall_grid     :480px;
+$small_grid      :768px;
+$medium_grid     :992px;
+$large_grid      :1200px;
+$xlarge_grid     :1366px;
+$huge_grid       :1400px;
+
+[class^=sapl-col-] {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@for $i from 1 through 12 {
+    .sapl-col-#{$i} {
+        flex: 0 0 calc(100% / 12 * $i);
+        max-width: 100% / 12 * $i;
+    }
+}
+
+@media only screen and (max-width: $xsmall_grid) {
+    @for $i from 1 through 12 {
+        .sapl-col-xxs-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@media only screen and (min-width: $xsmall_grid) {
+    @for $i from 1 through 12 {
+        .sapl-col-xs-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@media only screen and (min-width: $small_grid) {
+    @for $i from 1 through 12 {
+        .sapl-col-sm-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@media only screen and (min-width: $medium_grid) {
+    @for $i from 1 through 12 {
+        .sapl-col-md-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@media only screen and (min-width: $large_grid) {
+    @for $i from 1 through 12 {
+        .sapl-col-lg-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@media only screen and (min-width: $xlarge_grid) {
+    @for $i from 1 through 12 {
+        .sapl-col-xl-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
+
+@media only screen and (min-width: $huge) {
+    @for $i from 1 through 12 {
+        .sapl-col-hg-#{$i} {
+            flex: 0 0 calc(100% / 12 * $i);
+            max-width: 100% / 12 * $i;
+        }
+    }
+}
