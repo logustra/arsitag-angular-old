@@ -1,1 +1,1 @@
-angular.module('app', []);
+angular.module('angular.old', ['app.core']);

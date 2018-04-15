@@ -29,126 +29,21 @@
     <![endif]-->
 </head>
 
-<body ng-app="app" ng-controller="appCtrl">
+<body ng-app="angular.old" ng-controller="angular.old.ctr">
     <h1>{{ message }}</h1>
 
     <user></user>
+    <test-b></test-b>
 
-    <main>
-        <section>
-            <div class="container">
-                <h1 class="text-center">Bismillah</h1>
-                <img class="mx-auto d-block" src="images/image.gif" alt="">
-            </div>
-            <!-- .container -->
-        </section>
-
-        <section class="one" id="one">
-            <div class="container">
-                <h2>Title</h2>
-                <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis. Culpa consectetur officia aliqua dolor sit et labore
-                    ipsum. Elit in irure do reprehenderit consequat in deserunt ex aute ut ex sint minim. Minim commodo enim
-                    tempor amet ullamco. Duis magna culpa voluptate eiusmod in labore nostrud Lorem consequat cupidatat deserunt
-                    excepteur.</p>
-            </div>
-            <!-- .container -->
-        </section>
-
-        <section class="two" id="two">
-            <div class="container">
-                <div class="row">
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
-
-        <section class="three" id="three">
-            <div class="container">
-                <div class="row">
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-
-                    <div class="sapl-col-xxs-12 sapl-col-sm-4 sapl-col-hg-2">
-                        <h2>Title</h2>
-                        <p>Ullamco excepteur deserunt Lorem ullamco minim laboris quis.</p>
-                    </div>
-                    <!-- columns -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
-    </main>
-
-    <footer>
-
-    </footer>
+    <button ng-click="vm.user = ''">
+        clear
+    </button>
 
 
     <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../node_modules/angular-touch/angular-touch.js"></script>
+    <script src="../../node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
     <script src="js/app.bundle.js"></script>
 </body>
 

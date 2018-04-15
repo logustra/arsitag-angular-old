@@ -3,18 +3,13 @@
     "use strict";
 
     angular
-        .module('app')
-        .directive('user', () => {
+        .module('angular.old')
+        .directive('user', function () {
             return {
                 restrict: 'E',
                 templateUrl: 'directive/scenes/home/user.tpl.html',
                 controller: userCtrl,
                 controllerAs: 'vm',
-                link: (scope, el, attr) => {
-                    el.on('click', function (event) {
-                        console.log(event.target);
-                    })
-                }
             }
 
             function userCtrl() {

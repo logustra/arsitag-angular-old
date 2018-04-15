@@ -115,17 +115,28 @@ gulp.task(tasks.css, () => {
 // compile sass
 // automatic browser prefixing
 gulp.task(tasks.sass, () => {
-	return gulp.src(inputPath.sass)
-		.pipe(sourcemaps.init())
-		.pipe(sass({
-			outputStyle: 'expanded'
-		}).on('error', sass.logError))
-		.pipe(autoprefixer({browsers}))
-		.pipe(sourcemaps.write())
-		.pipe(rename( (path) => {
-			path.basename += '.min';
-		}))
-		.pipe(gulp.dest(outputPath.sass))
+    if (process.env.NODE_ENV === 'production') {
+        return gulp.src(inputPath.sass)
+            .pipe(sass({
+                outputStyle: 'compressed'
+            }).on('error', sass.logError))
+            .pipe(autoprefixer({ browsers }))
+            .pipe(rename(function (path) {
+                path.basename += '.min';
+            }))
+            .pipe(gulp.dest(outputPath.sass))
+    } else {
+        return gulp.src(inputPath.sass)
+            .pipe(sourcemaps.init())
+            .pipe(sass({
+                outputStyle: 'expanded'
+            }).on('error', sass.logError))
+            .pipe(sourcemaps.write())
+            .pipe(rename(function (path) {
+                path.basename += '.min';
+            }))
+            .pipe(gulp.dest(outputPath.sass))
+    }
 });
 
 // babelify

@@ -3,8 +3,8 @@
     "use strict";
 
     angular
-        .module('app')
-        .controller('appCtrl', ($scope) => {
+        .module('angular.old')
+        .controller('angular.old.ctr', ($scope) => {
             $scope.message = 'bismillah';
         })
 })()
