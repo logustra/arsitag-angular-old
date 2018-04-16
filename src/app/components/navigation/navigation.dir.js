@@ -1,16 +1,26 @@
 (() => {
     angular
         .module('angular.old')
-        .directive('navigation', function() {
+        .directive('navigation', ($window) => {
             return {
                 restrict: 'E',
                 scope: {},
-                templateUrl: 'directive/components/navigation/navigation.tpl.html',
+                templateUrl: templateUrlHandler,
                 controller: navigationCtr,
                 controllerAs: 'vm',
             }
 
-            function navigationCtr() {
+            function templateUrlHandler() {
+                const isMobile = $window.innerWidth <= 992;
+
+                if(isMobile) {
+                    return 'directive/components/navigation/sidebar.tpl.html';
+                } else {
+                    return 'directive/components/navigation/navigation.tpl.html';
+                }
+            }
+
+            function navigationCtr($window) {
                 const vm = this;
 
                 const user2 = {
