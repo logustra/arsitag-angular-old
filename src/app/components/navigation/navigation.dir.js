@@ -1,5 +1,3 @@
-import * as angular from 'angular';
-
 (() => {
     function navigation($window) {
         function templateUrlHandler() {
@@ -18,8 +16,7 @@ import * as angular from 'angular';
         }
 
         return {
-            restrict: 'E',
-            scope: {},
+            restrict: 'A',
             templateUrl: templateUrlHandler,
             controller: navigationCtr,
             controllerAs: 'vm',

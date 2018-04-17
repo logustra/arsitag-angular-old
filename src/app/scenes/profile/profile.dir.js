@@ -1,5 +1,3 @@
-import * as angular from 'angular';
-
 (() => {
     function profile() {
         function userCtrl() {
@@ -17,7 +15,7 @@ import * as angular from 'angular';
         }
 
         return {
-            restrict: 'E',
+            restrict: 'A',
             templateUrl: 'directive/scenes/profile/profile.tpl.html',
             controller: userCtrl,
             controllerAs: 'vm',

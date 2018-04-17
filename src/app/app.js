@@ -10,3 +10,4 @@ import './scenes/profile/profile.ctr';
 // directives
 import './components/navigation/navigation.dir';
 import './scenes/profile/profile.dir';
+import './components/footer/footer.dir';
