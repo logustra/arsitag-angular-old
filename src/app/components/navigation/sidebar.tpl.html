@@ -1,0 +1,49 @@
+<header>
+    <nav class="navbar sidebar navbar-expand-sm navbar-light bg-faded">
+        <div class="flex-nowrap flex-lg-wrap container">
+            <a href="#" class="mr-0 mr-lg-2 navbar-brand">
+                <img src="images/logo.png" alt="arsitag">
+            </a>
+            <div class="d-lg-none ml-4 mr-4 ml-sm-5 mr-sm-5 input-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari Inspirasi...">
+                    <div class="input-group-append">
+                        <Button class="input-group-text btn">
+                            <img src="images/search.png">
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            <button class="d-lg-none sidebar-toggle {{ navbarOpen ? 'active' : '' }}" ng-click="navbarOpen = !navbarOpen">
+                <span class="toggle-icon"></span>
+                <span class="toggle-icon"></span>
+                <span class="toggle-icon"></span>
+            </button>
+            <div class="d-lg-none navbar-wrapper-item" ng-show="navbarOpen">
+                <ul class="ml-4 navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inspirasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Artikel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Profesional</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link">Cari Profesional</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="backdrop" ng-show="navbarOpen" ng-click="navbarOpen = !navbarOpen"></div>
+</header>

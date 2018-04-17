@@ -1,0 +1,18 @@
+.backdrop.ng-hide {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $black;
+    opacity: 0.5;
+    z-index: 900;
+    visibility: visible;
+    transition: all .5s;
+}
