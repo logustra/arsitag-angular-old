@@ -1,0 +1,172 @@
+.cover {
+    border: 0;
+    box-shadow: 0 2px 4px 0 #e6e7e8;
+    margin-bottom: 30px;
+
+    img {
+        border-radius: 0;
+        ~.card-body {
+            display: flex;
+            align-items: center;
+            padding-top: 24px;
+            padding-bottom: 15px;
+        }
+    }
+
+    .card-body {
+        .user-img {
+            position: relative;
+            margin-top: -65px;
+            margin-right: 20px;
+        }
+
+        .user-body {
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: -10px;
+
+            .user-group {
+                .user-title {
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin: 0;
+                    color: $gray;
+                }
+
+                .btn + .btn {
+                    margin-left: 15px;
+                }
+
+                .rate-1,
+                .rate-2,
+                .rate-3,
+                .rate-4,
+                .rate-5 {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .reviews-count {
+                    font-size: 15px;
+                    margin-left: 10px;
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 372px) {
+    .cover {
+
+        .card-body {
+
+            .user-body {
+
+                .user-group {
+                    display: flex;
+                    flex-direction: column;
+
+                    .btn {
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mq(xs) {
+    .cover {
+
+        img {
+
+            ~ .card-body {
+                flex-direction: column;
+                justify-content: center;
+                padding-bottom: 30px;
+
+                img {
+                    margin-bottom: 25px;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .card-body {
+
+            .user-body {
+                flex-direction: column;
+
+                .user-group {
+                    text-align: center;
+
+                    .btn {
+                        margin-top: 25px;
+                    }
+
+                    .rate-1,
+                    .rate-2,
+                    .rate-3,
+                    .rate-4,
+                    .rate-5 {
+                       justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mq(sm) {
+    .cover {
+
+        .card-body {
+
+            .user-body {
+                flex-direction: column;
+
+                .user-group {
+                    text-align: center;
+
+                    .btn {
+                        margin-top: 25px;
+                    }
+
+                    .btn+.btn {
+                        margin-left: 15px;
+                    }
+
+                    .rate-1,
+                    .rate-2,
+                    .rate-3,
+                    .rate-4,
+                    .rate-5 {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mq(mnsm_mxlg) {
+    .cover {
+
+        img {
+            border-radius: 0;
+
+            ~.card-body {
+                flex-direction: column;
+                padding-bottom: 30px;
+
+                img {
+                    margin-bottom: 25px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
