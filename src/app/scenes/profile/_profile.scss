@@ -58,6 +58,107 @@
     }
 }
 
+.row {
+    .information {
+        border: 0;
+        box-shadow: 0 2px 4px 0 #e6e7e8;
+        margin-bottom: 30px;
+
+        .information-items {
+            list-style: none;
+            padding-left: 20px;
+            border-bottom: 2px solid $mediumsmoke;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                border-bottom: 0;
+                padding-bottom: 0;
+                margin-bottom: 5px;
+            }
+        }
+
+        .information-items-top {
+
+            .information-item {
+                color: $gray;
+                padding-left: 1em;
+                text-indent: -30px;
+                color: $gray;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:nth-of-type(1):before {
+                    content: url('../images/Briefcase - simple-line-icons.png');
+                    margin-right: 15px;
+                }
+
+                &:nth-of-type(2):before {
+                    content: url('../images/User - simple-line-icons.png');
+                    margin-right: 15px;
+                }
+
+                &:nth-of-type(3):before {
+                    content: url('../images/Location-pin - simple-line-icons.png');
+                    margin-right: 15px;
+                }
+
+                &:nth-of-type(4):before {
+                    content: url('../images/Phone - simple-line-icons Copy 2.png');
+                    margin-right: 15px;
+                }
+
+                &:nth-of-type(5):before {
+                    content: url('../images/Globe - simple-line-icons.png');
+                    margin-right: 15px;
+                }
+
+                a {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .information-items-bottom {
+
+            .information-item {
+
+                a {
+                    display: flex;
+                    width: 35px;
+                    height: 35px;
+                    background: $gray;
+                    color: $white;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        p {
+            font-weight: bold;
+            color: $gray;
+            margin-bottom: 10px;
+
+            ~ .information-items {
+                padding-left: 0;
+
+                li {
+                    color: $gray;
+                }
+
+                li+li {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 372px) {
     .cover {
 
