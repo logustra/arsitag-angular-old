@@ -59,10 +59,15 @@
 }
 
 .row {
-    .information {
+
+    .information,
+    .review {
         border: 0;
         box-shadow: 0 2px 4px 0 #e6e7e8;
         margin-bottom: 30px;
+    }
+
+    .information {
 
         .information-items {
             list-style: none;
@@ -135,6 +140,10 @@
                     justify-content: center;
                     align-items: center;
                     border-radius: 50%;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
                 }
             }
         }
@@ -153,6 +162,60 @@
 
                 li+li {
                     margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .review {
+
+        .review-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .review-items {
+            margin-bottom: 0;
+
+            li {
+                border-bottom: 2px solid $mediumsmoke;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                .review-header {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        border-radius: 50%;
+                        height: 52px;
+                        border: 1px solid $darksmoke;
+                        margin-right: 15px;
+                    }
+
+                    .review-group {
+                        h6 {
+                            margin-bottom: 0;
+                            font-weight: bold;
+                            font-size: 15px;
+                        }
+
+                        [class^=rate-] {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+
+                .review-body {
+                    margin-top: 15px;
                 }
             }
         }
