@@ -32,7 +32,7 @@
                     <li class="information-item">Michael Gani Test</li>
                     <li class="information-item">Jakarta, Indonesia, San Francisco</li>
                     <li class="information-item">
-                        <a class="text-danger font-weight-bold">Telepon Sekarang</a>
+                        <a class="text-danger font-weight-bold class" ng-click="callNow($event)" number="08234512432">Telepon Sekarang</a>
                     </li>
                     <li class="information-item">
                         <a href="http://www.arsitag.com" target="_blank">http://www.arsitag.com</a>
@@ -145,33 +145,23 @@
     <div class="col-lg-8 col-xl-9">
         <div class="tab-information card">
             <div class="card-body">
-                <ul class="tab-information-items nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="active nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Reviews</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active">
-                        <h6 class="font-weight-bold">About</h6>
+                <uib-tabset class="tab-information-items" active="active">
+                    <uib-tab index="1" heading="About">
                         <p class="d-inline">Sunt ipsum sit mollit non occaecat reprehenderit quis id. Do deserunt commodo magna est sunt elit
                             aliqua labore. Eiusmod sunt eiusmod veniam sunt dolor commodo anim aliquip ex sunt. Aliqua ea
                             Lorem ma</p>
                         <a class="text-danger font-weight-bold ml-2" role="button">Selengkapnya &gt;</a>
-                    </div>
-                    <div class="tab-pane">
+                    </uib-tab>
+
+                    <uib-tab index="2" heading="Projects">
                         <h6 class="font-weight-bold">Projects</h6>
                         <p class="d-inline">Occaecat ad eiusmod eiusmod culpa aliquip adipisicing magna exercitation non. Non velit Lorem in
                             duis reprehenderit cillum. Nostrud do amet elit fugiat minim fugiat sit sunt occaecat veniam
                             enim. Est </p>
                         <a class="text-danger font-weight-bold ml-2" role="button">Selengkapnya &gt;</a>
-                    </div>
-                    <div class="tab-pane">
+                    </uib-tab>
+
+                    <uib-tab index="3" heading="Reviews">
                         <h6 class="font-weight-bold">Reviews</h6>
                         <p class="d-inline">Tempor velit nulla id sint enim sit fugiat excepteur minim mollit esse eu ex dolore. Veniam exercitation
                             cupidatat ex qui. Reprehenderit sit nostrud id nulla eiusmod proident. Esse amet exercitation
@@ -179,8 +169,8 @@
                             ut ipsum elit eiusmod ut ad incididunt in adipisicing enim.</p>
                         <a class="text-danger font-weight-bold ml-2"
                             role="button">Sembunyikan ^</a>
-                    </div>
-                </div>
+                    </uib-tab>
+                </uib-tabset>
             </div>
         </div>
         <div class="project">

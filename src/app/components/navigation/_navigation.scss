@@ -18,6 +18,9 @@
                     font-size: 15px;
                     cursor: pointer;
                 }
+                .nav-link.active {
+                    color: $red;
+                }
                 .input-group-text {
                     background: $white;
                 }

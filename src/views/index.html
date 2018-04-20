@@ -29,12 +29,13 @@
     <![endif]-->
 </head>
 
-<body ng-app="angular.old" ng-controller="angular.old.ctr">
+<body ng-app="angular.old" ng-controller="profile.ctr">
 
     <header navigation></header>
+
     <main>
         <div class="container">
-            <div profile></div>
+            <ui-view></ui-view>
         </div>
     </main>
     <footer footer></footer>
@@ -42,7 +43,8 @@
     <script src="../node_modules/angular/angular.js"></script>
     <script src="../node_modules/angular-animate/angular-animate.js"></script>
     <script src="../node_modules/angular-touch/angular-touch.js"></script>
-    <script src="../../node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
+    <script src="../node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
+    <script src="../node_modules//angular-ui-router/release/angular-ui-router.js"></script>
     <script src="js/app.bundle.js"></script>
 </body>
 

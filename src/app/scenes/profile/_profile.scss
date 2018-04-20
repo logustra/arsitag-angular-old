@@ -1,6 +1,4 @@
 .cover {
-    border: 0;
-    box-shadow: 0 2px 4px 0 #e6e7e8;
     margin-bottom: 30px;
 
     img {
@@ -63,8 +61,6 @@
     .information,
     .review,
     .tab-information {
-        border: 0;
-        box-shadow: 0 2px 4px 0 #e6e7e8;
         margin-bottom: 30px;
     }
 
@@ -223,26 +219,33 @@
     }
 
     .tab-information {
+        .card-body {
+            @include clearfix;
+        }
+
         .tab-information-items {
-            color: $gray;
-            margin: -20px -20px 20px -20px;
 
-            li {
-                cursor: pointer;
+            ul {
+                color: $gray;
+                margin: -20px -20px 20px -20px;
 
-                a {
-                    font-weight: bold;
-                    font-size: 15px;
-                    border: 0 !important;
-                    border-right: 1px solid $mediumsmoke !important;
-                    border-top-right-radius: 0 !important;
-                    padding: 15px;
-                }
+                li {
+                    cursor: pointer;
 
-                a.active {
-                    color: var(--danger) !important;
-                    border-bottom: 2px solid var(--danger) !important;
-                    padding-bottom: 14px;
+                    a {
+                        font-weight: bold;
+                        font-size: 15px;
+                        border: 0 !important;
+                        border-right: 1px solid $mediumsmoke !important;
+                        border-top-right-radius: 0 !important;
+                        padding: 15px;
+                    }
+
+                    a.active {
+                        color: var(--danger) !important;
+                        border-bottom: 2px solid var(--danger) !important;
+                        padding-bottom: 14px;
+                    }
                 }
             }
         }
@@ -251,6 +254,7 @@
             color: $gray;
 
             .tab-pane {
+                @include clearfix;
 
                 a {
                     cursor: pointer;
@@ -270,8 +274,6 @@
         .row {
 
             .project-item {
-                border: 0;
-                box-shadow: 0 2px 4px 0 #e6e7e8;
                 margin-bottom: 30px;
                 color: $gray;
 
