@@ -239,6 +239,10 @@
                         border-right: 1px solid $mediumsmoke !important;
                         border-top-right-radius: 0 !important;
                         padding: 15px;
+
+                        &:hover {
+                            color: $gray;
+                        }
                     }
 
                     a.active {
@@ -274,8 +278,8 @@
         .row {
 
             .project-item {
-                margin-bottom: 30px;
                 color: $gray;
+                margin-bottom: 30px;
 
                 .card-body {
                     padding: 15px;
