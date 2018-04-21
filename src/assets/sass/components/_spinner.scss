@@ -1,0 +1,7 @@
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: var(--danger);
+    margin: 100px auto;
+    animation: rotatePlane 1.2s infinite ease-in-out;
+}

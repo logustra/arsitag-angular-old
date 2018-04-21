@@ -15,8 +15,10 @@ Telegram    : @logustra
 @import "base/colors";
 @import "base/typography";
 @import "base/base";
+@import "base/animations";
 
 @import "components/backdrop";
+@import "components/spinner";
 
 // layout
 @import "layout/navbar";
