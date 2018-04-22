@@ -12,5 +12,8 @@ import './scenes/profile/profile.fac';
 
 // directives
 import './components/navigation/navigation.dir';
+import './scenes/home/home.dir';
+import './scenes/inspirasi/inspirasi.dir';
+import './scenes/artikel/artikel.dir';
 import './scenes/profile/profile.dir';
 import './components/footer/footer.dir';

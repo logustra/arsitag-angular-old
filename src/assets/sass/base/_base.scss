@@ -17,6 +17,16 @@ a {
     box-shadow: 0 2px 4px 0 #e6e7e8;
 }
 
+.card-small {
+    margin: 65px auto 0 auto;
+    width: 500px;
+    color: $gray;
+
+    @include mq(xs) {
+        width: 100%;
+    }
+}
+
 .btn-line-danger {
    background: $white;
    border: 1px solid var(--danger);

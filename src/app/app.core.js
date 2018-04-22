@@ -1,1 +1,4 @@
-angular.module('app.core', ['ngAnimate', 'ngTouch', 'ui.bootstrap']);
+(() => {
+    angular
+        .module('app.core', ['ngAnimate', 'ngTouch', 'ui.bootstrap']);
+})();

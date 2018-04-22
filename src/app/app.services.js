@@ -1,3 +1,5 @@
+import swal from 'sweetalert';
+
 (() => {
     function appSerives($rootScope, $http, BASE_URL) {
         $rootScope.makeRequest = (method, url) => {
@@ -10,6 +12,10 @@
                     'Content-Type': 'application/json',
                 },
             });
+        };
+
+        $rootScope.swal = (message) => {
+            swal('', `${message.statusText}`, 'error');
         };
     }
 

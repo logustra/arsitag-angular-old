@@ -2,7 +2,7 @@
     function profileCtr($rootScope, $scope, profileFac) {
         const vm = this;
 
-        $scope.callNow = ($event) => {
+        vm.callNow = ($event) => {
             const { target } = $event;
             const number = angular.element(target).attr('number');
             angular.element(target).text(number);
@@ -99,7 +99,7 @@
                 },
             ];
         }).catch((error) => {
-            console.log(error);
+            $rootScope.swal(error);
         });
     }
 

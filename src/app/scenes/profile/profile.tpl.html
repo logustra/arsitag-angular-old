@@ -37,7 +37,7 @@
                             <li class="information-item">{{ vm.profile.name }}</li>
                             <li class="information-item">{{ vm.profile.location }}</li>
                             <li class="information-item">
-                                <a class="text-danger font-weight-bold class" ng-click="callNow($event)" number="{{ vm.profile.phone_mobile }}">Telepon Sekarang</a>
+                                <a class="text-danger font-weight-bold class" ng-click="vm.callNow($event)" number="{{ vm.profile.phone_mobile }}">Telepon Sekarang</a>
                             </li>
                             <li class="information-item">
                                 <a href="http://www.arsitag.com" target="_blank">{{ vm.profile.website }}</a>
@@ -111,8 +111,8 @@
                             <div class="tab-information-item" ng-repeat="tab in vm.tabs">
                                 <uib-tab index="tab.id" heading="{{ tab.title }}">
                                     <h6 class="font-weight-bold">{{ tab.title }}</h6>
-                                    <p class="d-inline">{{ tab.text }}</p>
-                                    <a class="text-danger font-weight-bold ml-2" role="button">Selengkapnya &gt;</a>
+                                    <p class="d-inline">{{ limitText ? tab.text : tab.text.substr(0, 200) }}</p>
+                                    <a class="text-danger font-weight-bold ml-2" ng-click="limitText = !limitText" role="button">{{ limitText ? 'Sembunyikan ^' : 'Selengkapnya >'}}</a>
                                 </uib-tab>
                             </div>
                         </uib-tabset>

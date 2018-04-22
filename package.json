@@ -37,6 +37,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "run-sequence": "^2.2.1",
+    "sweetalert": "^2.1.0",
     "ui-bootstrap4": "^3.0.3",
     "vinyl-buffer": "^1.0.1"
   }
