@@ -7,7 +7,7 @@ mn : min-width;
 mx : max-width;
 
 breakpoint
-xs : xtra small     = 576px;
+xs : xtra small     = less than 576px;
 sm : small          = 576px;
 md : medium         = 768px;
 lg : large          = 992px ;
@@ -36,9 +36,9 @@ and have available space at screen resolution 992px until large devices
 
 // breakpoints
 $small    :576px;
-$medium   :992px;
-$large    :1200px;
-$xlarge   :1366px;
+$medium   :768px;
+$large    :992px;
+$xlarge   :1200px;
 
 // media queries
 @mixin mq($screenSize) {
